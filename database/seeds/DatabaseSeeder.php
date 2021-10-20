@@ -5,7 +5,7 @@ use App\Sucursales;
 use App\Clientes;
 use App\Vehiculos;
 use App\Vendedores;
-
+use App\Polizas;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -25,7 +25,8 @@ class DatabaseSeeder extends Seeder
         factory(Vehiculos::class,$cantidadVehiculos)->create();
         $cantidadVendedores=10;
         factory(Vendedores::class,$cantidadVendedores)->create();
-
+        $cantidadPolizas=10;
+        factory(Polizas::class,$cantidadPolizas)->create();
         //$cantidadProductos=10;
                         //factory(Accidentes::class,$cantidadAccidentes)->create();
                         //factory(Product::class,$cantidadProductos)->create();
