@@ -1,6 +1,8 @@
 <?php
 use Illuminate\Database\Seeder;
 use App\Accidentes;
+use App\Sucursales;
+
 //use App\Product;
 
 class DatabaseSeeder extends Seeder
@@ -14,6 +16,8 @@ class DatabaseSeeder extends Seeder
     {
         $cantidadAccidentes=10;
         Factory(Accidentes::class ,$cantidadAccidentes)->create();
+        $cantidadSucursales=10;
+        factory(Sucursales::class,$cantidadSucursales)->create(); 
                      
                         //$cantidadProductos=10;
                         //factory(Accidentes::class,$cantidadAccidentes)->create(); 
