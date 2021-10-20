@@ -9,5 +9,11 @@ class clientes extends Model
     public function vehiculos(){
         return $this->belongsTo('App/Vehiculos');
     }
-
+    
+    protected $fillable = [
+        'documento',
+        'nombre',
+        'domicilio',
+        'telefono'
+    ];
 }
