@@ -18,8 +18,11 @@ class CreateAccidentesTable extends Migration
             $table->String('fecha');
             $table->String('lugar');
             $table->Text('descripcion');
+            //$table->foreign('patente')->references('patente')->on('vehiculos');
+
             $table->timestamps();
         });
+
     }
 
     /**
