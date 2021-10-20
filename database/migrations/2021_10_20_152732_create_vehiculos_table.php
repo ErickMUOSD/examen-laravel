@@ -15,21 +15,16 @@ class CreateVehiculosTable extends Migration
     {
         Schema::create('vehiculos', function (Blueprint $table) {
             $table->bigIncrements('id_vehiculo');
+            $table->string('patentesV');
             $table->string('no_motor');
             $table->String('marca');
             $table->String('modelo');
 
             // llaves foraneas
-            $table->UnsignedBigIncrements('id_vehiculo');
-            $table->UnsignedBigIncrements('id_accidente');
-            $table->UnsignedBigIncrements('id_poliza');
-
-            $table->foreign('id_vehiculo')->references('id_vehiculo')->on('vehiculos');
+            $table->unsignedBigInteger('id_cliente');
+            $table->unsignedBigInteger('id_accidente');
+            $table->foreign('id_cliente')->references('id_cliente')->on('clientes');
             $table->foreign('id_accidente')->references('id_accidente')->on('accidentes');
-            $table->foreign('id_poliza')->references('id_poliza')->on('polizas');
-            
-
-
             $table->timestamps();
         });
     }

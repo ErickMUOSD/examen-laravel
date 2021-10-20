@@ -15,14 +15,14 @@ class CreateVendedoresTable extends Migration
     {
         Schema::create('vendedores', function (Blueprint $table) {
             $table->bigIncrements('id_vendedor');
-            $table->string('documento');
+            $table->string('documentoV');
             $table->string('nombre');
             $table->string('domicilio');
             $table->string('telefono');
-            $table->string('numero_sucursal');
+          
             //LLave foranea
-            $table->unsignedBigInteger('no_sucursal');
-            $table->foreign('no_sucursal')->references('nro')->on('sucursales');
+            $table->unsignedBigInteger('id_sucursal');
+            $table->foreign('id_sucursal')->references('id_sucurzal')->on('sucursales');
             $table->timestamps();
         });
     }
