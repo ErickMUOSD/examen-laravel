@@ -3,6 +3,7 @@ use Illuminate\Database\Seeder;
 use App\Accidentes;
 use App\Sucursales;
 use App\Clientes;
+use App\Vehiculos;
 
 //use App\Product;
 
@@ -21,6 +22,8 @@ class DatabaseSeeder extends Seeder
         factory(Sucursales::class,$cantidadSucursales)->create();
         $cantidadClientes=10;
         factory(Clientes::class,$cantidadClientes)->create(); 
+        $cantidadVehiculos=10;
+        factory(Vehiculos::class,$cantidadVehiculos)->create(); 
                      
                         //$cantidadProductos=10;
                         //factory(Accidentes::class,$cantidadAccidentes)->create(); 
