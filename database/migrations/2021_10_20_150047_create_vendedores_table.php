@@ -14,10 +14,12 @@ class CreateVendedoresTable extends Migration
     public function up()
     {
         Schema::create('vendedores', function (Blueprint $table) {
-            $table->bigIncrements('documento');
+            $table->bigIncrements('id_vendedor');
+            $table->string('documento');
             $table->string('nombre');
             $table->string('domicilio');
             $table->string('telefono');
+            $table->string('numero_sucursal');
             //LLave foranea
             $table->unsignedBigInteger('no_sucursal');
             $table->foreign('no_sucursal')->references('nro')->on('sucursales');
