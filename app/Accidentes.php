@@ -9,4 +9,14 @@ class Accidentes extends Model
     public function vehiculos(){
         return $this->belongsTo ('App/Vehiculos');
     } 
+
+    //Definien los campos de la tabla
+    protected $fillable = [
+            'patente', 
+            'lugar',
+            'descripcion'
+    ];
+
+
 }
+
