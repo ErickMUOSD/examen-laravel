@@ -19,10 +19,10 @@ class CreateVendedoresTable extends Migration
             $table->string('nombre');
             $table->string('domicilio');
             $table->string('telefono');
-          
+
             //LLave foranea
             $table->unsignedBigInteger('id_sucursal');
-            $table->foreign('id_sucursal')->references('id_sucurzal')->on('sucursales');
+            $table->foreign('id_sucursal')->references('id_sucursales')->on('sucursales');
             $table->timestamps();
         });
     }

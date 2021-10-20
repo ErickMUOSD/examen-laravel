@@ -14,8 +14,8 @@ class CreateAccidentesTable extends Migration
     public function up()
     {
         Schema::create('accidentes', function (Blueprint $table) {
-            $table->$table->bigIncrements('id_accidente');
-            $table->$table->string('patente');
+            $table->bigIncrements('id_accidente');
+            $table->string('patente');
             $table->String('lugar');
             $table->Text('descripcion');
             $table->timestamps();
