@@ -4,7 +4,7 @@
 <h1 class='text-center'>Bienvenido a la página de</h1>
 <h1 class='text-center'>Clientes</h1>
 @section('contenido')
-    
+
 @endsection
 @if(!empty($clientes))
     <div class="row justify-content-center">
@@ -28,7 +28,17 @@
                                 <td>{{$clientes1->nombre}}</td>
                                 <td>{{$clientes1->domicilio}}</td>
                                 <td><button class="btn btn-primary">Editar</button>
+
+
+                                </td>
+                                <td>
+                                    <form action="{{ route('clientes.destroy', [$clientes1->id]) }}" method="POST">
+                                    @csrf
+
+                                        {{ method_field('DELETE') }}
+
                                     <button class="btn btn-danger">Eliminar</button>
+
                                 </td>
                             </tr>
                         @endforeach
