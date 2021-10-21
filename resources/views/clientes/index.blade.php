@@ -10,19 +10,19 @@
                     <table class="table">
                         <thead>
                         <tr>
-                            <th>Id</th>
-                            <th>Emanil</th>
-                            <th>Domain Name</th>
+                            <th>Documento</th>
+                            <th>Nombre</th>
+                            <th>Domicilio</th>
                         </tr>
                         </thead>
                         <tbody>
-                        @foreach($internet  as $data)
+                        @foreach($clientes as $clientes1)
                             <tr>
 
 
-                                <td>{{$clientes->patentesV}}</td>
-                                <td>{{$clientes->no_motor}}</td>
-                                <td>{{$clientes->marca}}</td>
+                                <td>{{$clientes1->documento}}</td>
+                                <td>{{$clientes1->nombre}}</td>
+                                <td>{{$clientes1->domicilio}}</td>
                                 <td><button class="btn btn-primary">Editar</button>
                                     <button class="btn btn-danger">Eliminar</button>
                                 </td>
