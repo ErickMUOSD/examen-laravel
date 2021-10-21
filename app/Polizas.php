@@ -17,10 +17,10 @@ class Polizas extends Model
 'id_vehiculo',
 ];
     public  function vehiculos(){
-        return $this->hasMany('App\Vehiculos');
+        return $this->belongsTo ('App\Vehiculos');
     }
     public  function vendedores(){
-        return $this->hasMany('App\Vendedores');
+        return $this->belongsTo ('App\Vendedores');
 
 }
 }

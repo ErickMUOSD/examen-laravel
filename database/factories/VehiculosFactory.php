@@ -9,17 +9,16 @@ use Faker\Generator as Faker;
 
 $factory->define(Vehiculos::class, function (Faker $faker) {
     return [
-                  
+
                 'patentesV'=>$this->faker->word,
                 'no_motor'=>$this->faker->word,
                 'marca'=>$this->faker->word,
                 'modelo'=>$this->faker->word,
 
                 //Definir llave foranea
-                'id_cliente'=> Clientes::all()->random()->id_cliente,
-                'id_accidente'=> Accidentes::all()->random()->id_accidente
-
+                'clientes_id'=> Clientes::all()->random()->id,
+                'accidentes_id'=> Accidentes::all()->random()->id
             ];
         });
-        
-    
+
+

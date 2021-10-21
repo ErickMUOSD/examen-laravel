@@ -1,34 +1,37 @@
 <?php
 
 namespace App;
-
-use Illuminate\Database\Eloquent\Model;
 use App\Clientes;
-use App\Accidentes;
+use Illuminate\Database\Eloquent\Model;
+
 
 class Vehiculos extends Model
 {
-    public function cliente(){
 
-        return $this->hasMany('App/Clientes');
+    public function clientes(){
+
+      return $this->belongsTo('App\Clientes');
     }
 
     public function accidentes(){
-        
-        return $this->hasMany('App/Accidentes');
-    }
 
+        return $this->belongsTo ('App\Accidentes');
+    }
+public function polizas(){
+
+        return $this->hasMany ('App\Polizas');
+    }
     protected $fillable = [
 
-        
+
         'patentesV',
         'no_motor',
         'marca',
         'modelo',
         'id_cliente',
         'id_accidente'
-                  
+
         ];
-    
+
 }
 

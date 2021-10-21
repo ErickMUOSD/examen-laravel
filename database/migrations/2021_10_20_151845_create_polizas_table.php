@@ -14,17 +14,17 @@ class CreatePolizasTable extends Migration
     public function up()
     {
         Schema::create('polizas', function (Blueprint $table) {
-            $table->bigIncrements('id_poliza');
+            $table->bigIncrements('id');
             $table->string('nropoliza');
             $table->string('patenteP');
             $table->String('fechainicio');
             $table->String('duracion');
             $table->String('tipo');
 //laves foraneas
-            $table->unsignedBigInteger('id_vendedor');
-            $table->unsignedBigInteger('id_vehiculo');
-            $table->foreign('id_vendedor')->references('id_vendedor')->on('vendedores');
-            $table->foreign('id_vehiculo')->references('id_vehiculo')->on('vehiculos');
+            $table->unsignedBigInteger('vendedores_id');
+            $table->unsignedBigInteger('vehiculos_id');
+            $table->foreign('vendedores_id')->references('id')->on('vendedores');
+            $table->foreign('vehiculos_id')->references('id')->on('vehiculos');
             $table->timestamps();
 
         });

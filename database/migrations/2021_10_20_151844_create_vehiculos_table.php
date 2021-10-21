@@ -14,17 +14,17 @@ class CreateVehiculosTable extends Migration
     public function up()
     {
         Schema::create('vehiculos', function (Blueprint $table) {
-            $table->bigIncrements('id_vehiculo');
+            $table->bigIncrements('id');
             $table->string('patentesV');
             $table->string('no_motor');
             $table->String('marca');
             $table->String('modelo');
 
             // llaves foraneas
-            $table->unsignedBigInteger('id_cliente');
-            $table->unsignedBigInteger('id_accidente');
-            $table->foreign('id_cliente')->references('id_cliente')->on('clientes');
-            $table->foreign('id_accidente')->references('id_accidente')->on('accidentes');
+            $table->unsignedBigInteger('clientes_id');
+            $table->unsignedBigInteger('accidentes_id');
+            $table->foreign('clientes_id')->references('id')->on('clientes');
+            $table->foreign('accidentes_id')->references('id')->on('accidentes');
             $table->timestamps();
         });
     }

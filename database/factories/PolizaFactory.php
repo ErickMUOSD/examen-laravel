@@ -14,7 +14,7 @@ $factory->define(\App\Polizas::class, function (Faker $faker) {
         'fechainicio'=>$this->faker->word,
          'duracion'=>$this->faker->word,
         'tipo'=>$this->faker->word,
-        'id_vendedor'=> Vendedores::all()->random()->id_vendedor,
-          'id_vehiculo'=> Vehiculos::all()->random()->id_vehiculo
+        'vendedores_id'=> Vendedores::all()->random()->id,
+          'vehiculos_id'=> Vehiculos::all()->random()->id
     ];
 });

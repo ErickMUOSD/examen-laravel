@@ -14,7 +14,7 @@ $factory->define(Vendedores::class, function (Faker $faker) {
              'nombre'=>$this->faker->word,
          'domicilio'=>$this->faker->word,
          'telefono'=>$this->faker->word,
-           'id_sucursal'=> Sucursales::all()->random()->id_sucursales
+           'sucursales_id'=> Sucursales::all()->random()->id
 
     ];
 });

@@ -17,10 +17,10 @@ class Vendedores extends Model
     ];
     public function sucursales (){
 
-        return $this->hasMany('App/Sucursales');
+        return $this->belongsTo('App\Sucursales');
     }
     public function poliza (){
 
-        return $this->belongsTo('App/Polizas');
+        return $this->hasMany('App\Polizas');
     }
 }

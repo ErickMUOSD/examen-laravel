@@ -6,14 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class clientes extends Model
 {
-    public function vehiculos(){
-        return $this->belongsTo('App/Vehiculos');
-    }
-    
-    protected $fillable = [
+  protected $fillable = [
         'documento',
         'nombre',
         'domicilio',
         'telefono'
     ];
+    public function vehiculos(){
+      return $this->hasMany('App\Vehiculos');
+
+    }
+
+
 }

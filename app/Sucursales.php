@@ -12,9 +12,7 @@ class Sucursales extends Model
         'domicilio',
         'telefono',
     ];
-
-
     public function vendedores(){
-        return $this->belongsTo('App/Vendedores');
+        return $this->hasMany   ('App\Vendedores');
     }
 }

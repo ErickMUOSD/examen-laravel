@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Accidentes extends Model
 {
     public function vehiculos(){
-        return $this->belongsTo ('App/Vehiculos');
-    } 
+        return $this->hasMany('App\Vehiculos');
+    }
 
     //Definien los campos de la tabla
     protected $fillable = [
-            'patente', 
+            'patente',
             'lugar',
             'descripcion'
     ];
