@@ -1,11 +1,15 @@
+@extends('layouts.plantilla')
 
-<h1>Clientes</h1>
+@section('titulo')
+<h1 class='text-center'>Bienvenido a la página de</h1>
+<h1 class='text-center'>Clientes</h1>
+@section('contenido')
+    
+@endsection
 @if(!empty($clientes))
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-
-
                 <div class="card-body">
                     <table class="table">
                         <thead>
@@ -36,3 +40,4 @@
         </div>
     </div>
 @endif
+
